@@ -1,0 +1,56 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+body{
+    background-image: url("../images/backgroundwood.jpg");
+}
+
+.cadastrar{
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+}
+
+#login{
+    margin-top: 40px;
+}
+
+input{
+    border-radius: 15px !important;
+    border: 1px solid rgb(218, 216, 216) !important;
+    outline: none;
+}
+
+label{
+    margin: 0px !important;
+    color: white;
+}
+
+.small{
+   color: white !important;
+}
+
+h6{
+    color: white;
+}
+
+div#msg-sucesso{
+    color: white;
+    width: 400px;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: rgba(50, 205, 50, .3);
+    border: 1px solid rgb(34, 139, 34)
+}
+
+div.msg-erro{
+    color: white;
+    width: 400px;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: rgba(194, 39, 25, 0.3);
+    border: 1px solid rgb(122, 16, 16)
+}

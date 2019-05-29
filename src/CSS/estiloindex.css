@@ -1,0 +1,113 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+/* input{
+    display: block;
+    height: 30px;
+    width: 300px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+    font-size: 12pt;
+    padding: 4px 10px;
+}
+
+.login{
+    width: 420px;
+    margin: 150px auto 0px auto; 
+} */
+
+body{
+    background-image: url("../images/backgroundwood.jpg");
+}
+
+.logar{
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+}
+
+#login{
+    margin-top: 180px;
+}
+
+.buttons-login{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+input{
+    border-radius: 15px !important;
+    border: 1px solid rgb(218, 216, 216) !important;
+    outline: none;
+}
+
+label{
+    margin: 0px !important;
+    color: white;
+}
+
+.small{
+   color: white !important;
+}
+
+h6{
+    color: white;
+}
+
+div#msg-sucesso{
+    color: white;
+    width: 400px;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: rgba(50, 205, 50, .3);
+    border: 1px solid rgb(34, 139, 34)
+}
+
+div.msg-erro{
+    color: white;
+    width: 400px;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: rgba(194, 39, 25, 0.3);
+    border: 1px solid rgb(122, 16, 16)
+}
+
+/* *{
+    margin: 0px;
+    padding: 0px;
+}
+
+#login{
+    width: 420px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form{
+    display: block;
+    align-items: center;
+    margin-bottom: 3px;
+}
+
+input{
+    display: block;
+    height: 30px;
+    width: 300px;
+    margin: 5px 0px 5px 0px;
+    border-radius: 10px;
+    border: 1px solid black;
+    font-size: 13px;
+    padding: 4px 10px;
+}
+
+input[type=submit]{
+
+}
+
+*/

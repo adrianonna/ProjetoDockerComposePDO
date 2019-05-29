@@ -1,0 +1,49 @@
+version: "3"
+networks:
+  app-tier:
+    driver: bridge
+services:
+  web:
+    container_name: web
+    build:
+      context: .
+      dockerfile: ./docker/php/Dockerfile
+    image: php:apache-pdo
+    networks:
+      - app-tier
+    ports:
+      - 8080:80
+    volumes:
+      - ./src/:/var/www/html/
+    depends_on:
+      - mysql
+  mysql:
+    container_name: mysql
+    image: mysql:latest
+    command: 
+      - --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: abc123
+      MYSQL_DATABASE: provapdo
+      MYSQL_USER: root
+      MYSQL_PASSWORD: abc123
+    networks:
+      - app-tier
+    ports:
+      - 33060:3306
+    volumes:
+      - ./data/mysql:/var/lib/mysql
+      - ./logs/mysql:/var/log/mysql
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    networks:
+      - app-tier
+    ports:
+      - "8000:80"
+    environment:
+      - PMA_ARBITRARY=1
+    restart: always
+    depends_on:
+      - web
+      - mysql
